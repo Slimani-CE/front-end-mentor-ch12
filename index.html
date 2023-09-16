@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-body">
+      <div class="bill-input-body">
+        <label for="bill-input" class="bill-label">Bill</label>
+        <label for="bill-input" class="input-label-error">Can't be zero</label>
+        <div class="bill-input">
+          <input id="bill-input" placeholder="0" type="number">
+          <img src="images/icon-dollar.svg" alt="">
+        </div>
+      </div>
+      <div class="tip-body">
+        <label class="tip-label">Select Tip %</label>
+        <div class="tips">
+          <button class="tip" value="5">5%</button>
+          <button class="tip" value="10">10%</button>
+          <button class="tip" value="15">15%</button>
+          <button class="tip" value="25">25%</button>
+          <button class="tip" value="50">50%</button>
+          <button class="tip custom">Custom</button>
+          <input type="number" placeholder="%" class="tip custom">
+        </div>
+      </div>
+      <div class="num-ppl-body">
+        <label for="num-ppl-input" class="num-ppl-label">Number of People</label>
+        <label for="num-ppl-input" class="input-label-error">Can't be zero</label>
+        <div class="num-ppl-input">
+          <input type="number" placeholder="0" id="num-ppl-input">
+          <img src="images/icon-person.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="result-body">
+      <div class="amount-body tip-body">
+        <div class="detail">
+          <div>Tip Amount</div>
+          <span>/ person</span>
+        </div>
+        <div class="amount">$0.00</div>
+      </div>
+      <div class="amount-body total-body">
+        <div class="detail">
+          <div>Total</div>
+          <span>/ person</span>
+        </div>
+        <div class="amount">$0.00</div>
+      </div>
+      <button class="reset-btn">Reset</button>
+    </div>
+  </div>
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  <script src="script.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://slimani-ce.github.io/" target="_blank">Mustapha SLIMANI</a>.
+  </div>
+</body>
+</html>
