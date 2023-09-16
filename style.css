@@ -26,7 +26,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: var(--light-grayish-cyan);
+}
+
+.logo {
+    padding: 50px;
 }
 
 .attribution {
@@ -272,6 +277,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 800px) {
     body {
         flex-direction: column;
+        height: auto;
     }
 
     .container {
