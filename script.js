@@ -10,6 +10,12 @@ tipBtns.forEach((btn) => {
   btn.addEventListener("click", checkTip);
 });
 
+// Add event listener to the reset button
+let resetBtn = document.querySelector(
+  "body > div.container > div.result-body > button"
+);
+resetBtn.addEventListener("click", resetForm);
+
 // Add event listener to the form body
 let formBody = document.querySelector(".form-body");
 formBody.addEventListener("click", calculate);
@@ -98,4 +104,30 @@ function calculate(event) {
     tipAmountEl.innerHTML = `$${tipAmount.toFixed(2)}`;
     totalEl.innerHTML = `$${total.toFixed(2)}`;
   }
+}
+
+// A function to reset the form to initial values
+// And reset the result card
+function resetForm() {
+  // Reset Inputs
+  document.querySelector("#bill-input").value = "";
+  document
+    .querySelectorAll(
+      "body > div.container > div.form-body > div.tip-body > div > button"
+    )
+    .forEach((btn) => {
+      btn.classList.remove("checked");
+    });
+  document.querySelector(
+    "body > div.container > div.form-body > div.tip-body > div > input"
+  ).value = "";
+  document.querySelector("#num-ppl-input").value = "";
+  // Reset Global Variables
+  let bill = 0;
+  let tip = 0;
+  let numPeople = 0;
+  // Reset result card
+  document.querySelector(".result-body .tip-body .amount").innerHTML = "$0.00";
+  document.querySelector(".result-body .total-body .amount").innerHTML =
+    "$0.00";
 }
